@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import "./styles.css";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function ExperiencePage() {
   const router = useRouter();
