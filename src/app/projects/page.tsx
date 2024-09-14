@@ -9,11 +9,6 @@ import { useEffect } from "react";
 export default function ExperiencePage() {
   const router = useRouter();
 
-  useEffect(() => {
-    // Scroll to the bottom of the page on load
-    window.scrollTo(0, document.body.scrollHeight);
-  }, []);
-
   return (
     <div className="flex min-h-screen flex-col items-center justify-start p-8 pb-0 overflow-hidden font-body">
       <div

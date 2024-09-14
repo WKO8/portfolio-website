@@ -16,8 +16,8 @@ export default function ExperiencePage() {
 
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-8 overflow-hidden font-body">
-      <div className="glitch-title mt-14 text-6xl" title="W_K.O">
+    <div className="flex min-h-screen flex-col items-center justify-around p-8 overflow-hidden font-body">
+      <div className="glitch-title text-6xl" title="W_K.O">
         W_K.O
       </div>
       
