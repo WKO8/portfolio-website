@@ -4,9 +4,15 @@ import { useRouter } from 'next/navigation'
 import Typewriter from "typewriter-effect";
 
 import "./styles.css";
+import { useEffect } from 'react';
 
 export default function ExperiencePage() {
   const router = useRouter()
+
+  useEffect(() => {
+    // Scroll to the bottom of the page on load
+    window.scrollTo(0, document.body.scrollHeight);
+  }, []);
 
 
   return (
