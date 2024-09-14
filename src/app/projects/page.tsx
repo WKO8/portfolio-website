@@ -9,7 +9,7 @@ export default function ExperiencePage() {
   const router = useRouter();
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-start p-8 overflow-hidden font-body">
+    <div className="flex min-h-screen flex-col items-center justify-start p-8 pb-0 overflow-hidden font-body">
       <div
         className="prev-scroll flex items-center flex-col justify-center gap-2 mb-10 text-mid-grey"
         onClick={() => router.push("/experience")}

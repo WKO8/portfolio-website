@@ -59,7 +59,7 @@ export default function ExperiencePage() {
       </div>
 
 
-      <div className="next-scroll flex items-center flex-col justify-center gap-2 pb-10 text-mid-grey" onClick={() => router.push('/projects')}>
+      <div className="next-scroll flex items-center flex-col justify-center gap-2 text-mid-grey" onClick={() => router.push('/projects')}>
         <span>Projects</span>
         <div className="button-next w-14 h-14 rounded-full bg-dark-grey flex items-center justify-center">
           <div className="triangle-next w-0 h-0 border-l-[0.8rem] border-l-transparent border-t-[1rem] border-t-black border-r-[0.8rem] border-r-transparent"></div>
