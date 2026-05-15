@@ -42,10 +42,35 @@ export default function ExperiencePage() {
 						</div>
 					</div>
 					<div className="projects-cards w-full">
-
+  			    <div className="project-card-0 ml-2">
+  						<Link
+  							className="flex flex-row w-full gap-3"
+  							href={"https://wkohub.com"}
+  							target="_blank"
+  						>
+  							<div className="project-image w-1/5 align-middle text-center justify-center mt-2">
+  								<Image
+  									src="/images/wkohub-logo-plain.svg"
+  									alt="WKO Hub"
+  									width="60"
+  									height="60"
+  									className="rounded-3xl"
+  								/>
+  							</div>
+  							<div className="project-info w-4/5">
+  								<h4 className="text-lg font-bold mb-2">
+  									WKO Hub
+  								</h4>
+  								<p className="text-gray-400 text-sm text-start">
+                    A multi-tenant SaaS platform
+                    designed to digitize small and medium-sized businesses.
+  								</p>
+  							</div>
+  						</Link>
+  					</div>
 						<div className="project-card-1 ml-2">
 							<Link
-								className="flex flex-row w-full gap-3"
+								className="flex flex-row w-full gap-3 mt-5"
 								href={"https://www.crochetartbh.com"}
 								target="_blank"
 							>

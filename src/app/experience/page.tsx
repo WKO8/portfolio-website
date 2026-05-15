@@ -47,13 +47,24 @@ export default function ExperiencePage() {
           <span className="text-mid-grey text-md">0.5 year of</span>
           <h3 className="half-underline text-light-grey text-xl">Experience</h3>
           <div className="job-local-time flex flex-row justify-between px-2 mt-5">
-            <h2 className="text-xl text-start">Software Developer <br/>Internship</h2>
+            <h2 className="text-xl text-start">Mobile Developer <br/>Internship</h2>
             <div className="job-time text-end">
               <h3 className="text-lg">Mestria</h3>
               <h4 className="text-sm">Fev/24 - Jul/24</h4>
             </div>
           </div>
-          
+        </div>
+
+        <div className="experience flex flex-col mt-10">
+          <span className="text-mid-grey text-md">1 year of</span>
+          <h3 className="half-underline text-light-grey text-xl">Experience</h3>
+          <div className="job-local-time flex flex-row justify-between px-2 mt-5">
+            <h2 className="text-xl text-start">iOS Software Engineer <br/>Internship</h2>
+            <div className="job-time text-end">
+              <h3 className="text-lg">dti digital</h3>
+              <h4 className="text-sm">Jun/25 - Mai/26</h4>
+            </div>
+          </div>
         </div>
       </div>
 
