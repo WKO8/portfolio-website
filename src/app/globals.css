@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-body: "Sometype Mono", system-ui, sans-serif;
+
+  --color-light-grey: #A7A6A6;
+  --color-mid-grey: #363636;
+  --color-dark-grey: #1E1E1E;
+  --color-hacker-green: #20C20E;
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
