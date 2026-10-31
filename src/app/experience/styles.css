@@ -1,69 +1,78 @@
 .glitch-title {
+  position: relative;
+  display: inline-block;
   animation: glitch 3s linear infinite;
+}
+
+.glitch-title:before,
+.glitch-title:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-title:before {
+  animation: glitchTop 1.5s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  color: var(--theme-hacker-green);
+  opacity: 0.8;
+}
+
+.glitch-title:after {
+  animation: glitchBottom 1.2s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  color: var(--theme-text-muted);
+  opacity: 0.7;
 }
 
 .Typewriter {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 0.4rem;
 }
 
-@keyframes glitch{
-  2%,64%{
-    transform: translate(0px,0) skew(0deg);
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(0px, 0) skew(0deg);
   }
-  20%,60%{
-    transform: translate(0px,0) skew(0deg);
+  20%, 60% {
+    transform: translate(0px, 0) skew(0deg);
   }
-  62%{
-    transform: translate(0,0) skew(15deg); 
+  62% {
+    transform: translate(0, 0) skew(12deg);
   }
 }
 
-div:before,
-div:after{
-  content: attr(title);
-  position: absolute;
-  left: 0;
-}
-
-div:before{
-  animation: glitchTop 1.5s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-@keyframes glitchTop{
+@keyframes glitchTop {
   0%, 100% {
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
-  2%,64%{
-    transform: translate(1px,-1px);
+  2%, 64% {
+    transform: translate(1px, -1px);
   }
-  4%,60%{
-    transform: translate(1px,2px);
+  4%, 60% {
+    transform: translate(1px, 2px);
   }
-  62%{
-    transform: translate(20px,-1px) skew(-21deg); 
+  62% {
+    transform: translate(8px, -1px) skew(-12deg);
   }
 }
 
-div:after{
-  animation: glitchBottom 1s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBottom{
+@keyframes glitchBottom {
   0%, 100% {
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
-  2%,64%{
-    transform: translate(-2px,0);
+  2%, 64% {
+    transform: translate(-2px, 0);
   }
-  4%,60%{
-    transform: translate(-2px,0);
+  4%, 60% {
+    transform: translate(-2px, 0);
   }
-  62%{
-    transform: translate(-22px,5px) skew(21deg); 
+  62% {
+    transform: translate(-8px, 2px) skew(12deg);
   }
 }

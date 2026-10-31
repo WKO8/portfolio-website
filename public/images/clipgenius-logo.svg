@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="clipBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180b2b" />
+      <stop offset="100%" stop-color="#090514" />
+    </linearGradient>
+    <linearGradient id="neonClip" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="playGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <filter id="clipGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="192" height="192" rx="42" fill="url(#clipBg)" />
+  <rect width="188" height="188" x="2" y="2" rx="40" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-opacity="0.3" />
+
+  <!-- Video Film Strip / Timeline container -->
+  <rect x="36" y="44" width="120" height="104" rx="16" fill="#130924" stroke="url(#neonClip)" stroke-width="3" />
+  
+  <!-- Film Spool cuts top & bottom -->
+  <rect x="46" y="52" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+  <rect x="68" y="52" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+  <rect x="90" y="52" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+  <rect x="112" y="52" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+  <rect x="132" y="52" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+
+  <rect x="46" y="130" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+  <rect x="68" y="130" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+  <rect x="90" y="130" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+  <rect x="112" y="130" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+  <rect x="132" y="130" width="14" height="10" rx="3" fill="#8b5cf6" opacity="0.6" />
+
+  <!-- Central Dynamic Play Triangle with AI Spark -->
+  <path d="M86 80 L118 96 L86 112 Z" fill="url(#playGrad)" filter="url(#clipGlow)" />
+  
+  <!-- Temporal Scissors / AI Sparkle Indicator -->
+  <path d="M128 72 Q134 66 140 74 Q146 66 152 72 Q148 80 154 86 Q146 84 140 90 Q136 84 128 86 Q134 78 128 72 Z" fill="#38bdf8" filter="url(#clipGlow)" opacity="0.9" />
+</svg>
