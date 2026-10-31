@@ -71,8 +71,8 @@ export default function ExperiencePage() {
           </h3>
           <div className="job-local-time flex flex-row justify-between px-2 mt-5">
             <h2 className="text-xl text-start">
-              {isPt ? "Estágio em" : "Mobile Developer"} <br />
-              {isPt ? "Desenvolvimento Mobile" : "Internship"}
+              {isPt ? "Desenvolvedor de" : "Software Engineer"} <br />
+              {isPt ? "Software (Mobile & IoT)" : "(Mobile & IoT)"}
             </h2>
             <div className="job-time text-end">
               <h3 className="text-lg">Mestria</h3>
@@ -92,8 +92,8 @@ export default function ExperiencePage() {
           </h3>
           <div className="job-local-time flex flex-row justify-between px-2 mt-5">
             <h2 className="text-xl text-start">
-              {isPt ? "Estágio em Engenharia" : "iOS Software Engineer"} <br />
-              {isPt ? "de Software iOS" : "Internship"}
+              {isPt ? "Desenvolvedor de" : "Software Engineer -"} <br />
+              {isPt ? "Software - iOS" : "iOS"}
             </h2>
             <div className="job-time text-end">
               <h3 className="text-lg">dti digital</h3>

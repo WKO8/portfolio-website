@@ -115,7 +115,7 @@ export const translations: Record<"en" | "pt", TranslationSchema> = {
       jobs: [
         {
           timeSpan: "1 year of",
-          role: "iOS Software Engineer Internship",
+          role: "Software Engineer - iOS",
           company: "dti digital",
           period: "Jun/25 - May/26",
           description:
@@ -123,7 +123,7 @@ export const translations: Record<"en" | "pt", TranslationSchema> = {
         },
         {
           timeSpan: "0.5 year of",
-          role: "Mobile Developer Internship",
+          role: "Software Engineer (Mobile & IoT)",
           company: "Mestria",
           period: "Feb/24 - Jul/24",
           description:
@@ -307,7 +307,7 @@ export const translations: Record<"en" | "pt", TranslationSchema> = {
       jobs: [
         {
           timeSpan: "1 ano de",
-          role: "Estágio em Engenharia de Software iOS",
+          role: "Desenvolvedor de Software - iOS",
           company: "dti digital",
           period: "Jun/25 - Mai/26",
           description:
@@ -315,7 +315,7 @@ export const translations: Record<"en" | "pt", TranslationSchema> = {
         },
         {
           timeSpan: "0.5 ano de",
-          role: "Estágio em Desenvolvimento Mobile",
+          role: "Desenvolvedor de Software (Mobile & IoT)",
           company: "Mestria",
           period: "Fev/24 - Jul/24",
           description:
