@@ -14,14 +14,17 @@ export default function ExperiencePage() {
   const isPt = language === "pt";
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-around p-8 overflow-hidden font-body">
-      <div className="glitch-title text-6xl" title="W_K.O">
+    <div className="min-h-screen flex flex-col items-center justify-between px-4 py-8 sm:p-8 overflow-y-auto font-body">
+      <div
+        className="glitch-title text-[2.75rem] sm:text-5xl md:text-6xl leading-tight mb-3 sm:mb-4"
+        title="W_K.O"
+      >
         W_K.O
       </div>
 
       <div className="main-info max-w-lg">
-        <div className="personal-info text-light-grey text-justify">
-          <div className="about-me">
+        <div className="personal-info text-light-grey text-start sm:text-justify">
+          <div className="about-me text-start sm:text-justify">
             <span>
               {isPt
                 ? "Sou Engenheiro de Software formado em Ciência da Computação (PUC Minas), focado em serviços backend escaláveis, pipelines assíncronos de agentes de IA e sistemas de alta performance com Python, TypeScript e Rust. Sempre desenvolvendo soluções"
@@ -53,7 +56,7 @@ export default function ExperiencePage() {
             </span>
           </div>
 
-          <div className="current-job mt-8">
+          <div className="current-job mt-4 sm:mt-6 md:mt-8">
             <p className="text-desc">
               {isPt
                 ? "Atualmente disponível para oportunidades em Engenharia de Software, Backend, IA e AppSec (Remoto / Híbrido)."
@@ -62,7 +65,7 @@ export default function ExperiencePage() {
           </div>
         </div>
 
-        <div className="experience flex flex-col mt-20">
+        <div className="experience flex flex-col mt-6 sm:mt-12 md:mt-16">
           <span className="text-mid-grey text-md">
             {isPt ? "0.5 ano de" : "0.5 year of"}
           </span>
@@ -83,7 +86,7 @@ export default function ExperiencePage() {
           </div>
         </div>
 
-        <div className="experience flex flex-col mt-10">
+        <div className="experience flex flex-col mt-5 sm:mt-8 md:mt-10">
           <span className="text-mid-grey text-md">
             {isPt ? "1 ano de" : "1 year of"}
           </span>
@@ -106,7 +109,7 @@ export default function ExperiencePage() {
       </div>
 
       <div
-        className="next-scroll flex items-center flex-col justify-center gap-2 text-mid-grey cursor-pointer"
+        className="next-scroll flex items-center flex-col justify-center gap-2 text-mid-grey cursor-pointer mt-8 sm:mt-12 mb-4 sm:mb-0"
         onClick={() => router.push("/ai")}
       >
         <span>{isPt ? "IA & Sistemas" : "AI & Systems"}</span>

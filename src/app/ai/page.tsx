@@ -17,10 +17,10 @@ export default function AIPage() {
   const [isArchModalOpen, setIsArchModalOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-start p-8 pb-0 overflow-hidden font-body">
+    <div className="min-h-screen flex flex-col items-center justify-start px-4 py-8 sm:p-8 overflow-y-auto font-body">
       {/* Botão Superior: Voltar para Experience */}
       <div
-        className="prev-scroll flex items-center flex-col justify-center gap-2 mb-10 text-mid-grey cursor-pointer"
+        className="prev-scroll flex items-center flex-col justify-center gap-2 mb-6 sm:mb-10 text-mid-grey cursor-pointer"
         onClick={() => router.push("/experience")}
       >
         <div className="button-prev w-14 h-14 rounded-full bg-dark-grey flex items-center justify-center">
@@ -38,21 +38,37 @@ export default function AIPage() {
           </h3>
 
           {/* 1. Pipeline Shorts Engine */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-4">
-            <div className="text-start">
-              <h2 className="text-xl font-bold">Pipeline Shorts Engine</h2>
-              <p className="text-desc text-sm mt-1">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-4">
+            <div className="text-start w-full sm:w-auto">
+              <div className="flex items-center justify-between sm:justify-start gap-2">
+                <h2 className="text-xl font-bold">Pipeline Shorts Engine</h2>
+                <Link
+                  href="https://github.com/WKO8/pipeline-shorts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex sm:hidden items-center gap-1.5 text-xs text-hacker-green hover:opacity-80 transition-opacity shrink-0"
+                >
+                  <Image
+                    src="/images/github.svg"
+                    alt="GitHub"
+                    width={14}
+                    height={14}
+                  />
+                  <span className="underline">GitHub</span>
+                </Link>
+              </div>
+              <p className="text-desc text-sm mt-1 w-full">
                 {isPt
                   ? "Geração autônoma de cortes verticais em GPU de consumo, sincronização fonética WhisperX e detecção visual de falante com LR-ASD e YuNet."
                   : "Autonomous vertical shorts generation on consumer GPUs, phonetic WhisperX alignment, and visual active speaker detection with LR-ASD & YuNet."}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4 flex flex-col items-end">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-2 sm:mt-0 shrink-0 sm:ml-4">
               <Link
                 href="https://github.com/WKO8/pipeline-shorts"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-hacker-green hover:opacity-80 transition-opacity"
+                className="hidden sm:inline-flex items-center gap-1.5 text-xs text-hacker-green hover:opacity-80 transition-opacity"
               >
                 <Image
                   src="/images/github.svg"
@@ -62,7 +78,7 @@ export default function AIPage() {
                 />
                 <span className="underline">GitHub</span>
               </Link>
-              <h3 className="text-sm text-hacker-green mt-1">
+              <h3 className="text-sm text-hacker-green mt-0 sm:mt-1">
                 {isPt ? "Visão Multimodal" : "Multimodal / Video"}
               </h3>
               <h4 className="text-xs text-mid-grey">Ollama / Whisper</h4>
@@ -70,26 +86,56 @@ export default function AIPage() {
           </div>
 
           {/* 2. WKontrolAI Engine */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-6">
-            <div className="text-start">
-              <h2 className="text-xl font-bold">
-                <Link
-                  href="https://github.com/WKO8/wkontrolai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-hacker-green transition-colors"
-                >
-                  WKontrolAI Engine
-                </Link>
-              </h2>
-              <p className="text-desc text-sm mt-1">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-6">
+            <div className="text-start w-full sm:w-auto">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h2 className="text-xl font-bold">
+                  <Link
+                    href="https://github.com/WKO8/wkontrolai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-hacker-green transition-colors"
+                  >
+                    WKontrolAI Engine
+                  </Link>
+                </h2>
+                <div className="flex sm:hidden items-center gap-2">
+                  <Link
+                    href="https://github.com/WKO8/wkontrolai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-hacker-green hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                      src="/images/github.svg"
+                      alt="GitHub"
+                      width={14}
+                      height={14}
+                    />
+                    <span className="underline">GitHub</span>
+                  </Link>
+                  <button
+                    onClick={() => setIsArchModalOpen(true)}
+                    type="button"
+                    className="text-xs font-mono text-hacker-green hover:underline cursor-pointer transition-colors"
+                    title={
+                      isPt
+                        ? "Ver fluxo e decisões de arquitetura"
+                        : "View architecture & pipeline flow"
+                    }
+                  >
+                    [ {isPt ? "Ver Arquitetura" : "View Architecture"} ]
+                  </button>
+                </div>
+              </div>
+              <p className="text-desc text-sm mt-1 w-full">
                 {isPt
                   ? "Co-piloto financeiro no WhatsApp e PWA com Whisper LPU de baixa latência, DeepSeek V3, filas BullMQ e confirmação Human-in-the-Loop."
                   : "WhatsApp & PWA financial co-pilot featuring low-latency Whisper LPU, DeepSeek V3 vision, BullMQ queues, and Human-in-the-Loop confirmation."}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4 flex flex-col items-end">
-              <div className="flex items-center gap-2">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-2 sm:mt-0 shrink-0 sm:ml-4">
+              <div className="hidden sm:flex items-center gap-2">
                 <Link
                   href="https://github.com/WKO8/wkontrolai"
                   target="_blank"
@@ -117,7 +163,7 @@ export default function AIPage() {
                   [ {isPt ? "Ver Arquitetura" : "View Architecture"} ]
                 </button>
               </div>
-              <h3 className="text-sm text-hacker-green mt-1">
+              <h3 className="text-sm text-hacker-green mt-0 sm:mt-1">
                 {isPt ? "Agentes Autônomos" : "Autonomous Agents"}
               </h3>
               <h4 className="text-xs text-mid-grey">Groq / DeepSeek</h4>
@@ -132,8 +178,8 @@ export default function AIPage() {
           </h3>
 
           {/* 1. Databricks - Generative AI Fundamentals */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-4">
-            <div className="text-start">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-4">
+            <div className="text-start w-full sm:w-auto">
               <h2 className="text-lg font-bold">Generative AI Fundamentals</h2>
               <p className="text-desc text-xs mt-0.5">
                 {isPt
@@ -141,7 +187,7 @@ export default function AIPage() {
                   : "LLMs foundations, RAG architectures & ethical AI governance"}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-1 sm:mt-0 shrink-0 sm:ml-4">
               <h3 className="text-sm text-hacker-green">Databricks</h3>
               <h4 className="text-xs text-mid-grey font-mono">
                 {isPt ? "Cód: " : "ID: "}169612060
@@ -150,8 +196,8 @@ export default function AIPage() {
           </div>
 
           {/* 2. DIO - Fundamentos da IA Moderna */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-5">
-            <div className="text-start">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-5">
+            <div className="text-start w-full sm:w-auto">
               <h2 className="text-lg font-bold">
                 {isPt ? "Fundamentos da IA Moderna" : "Modern AI Fundamentals"}
               </h2>
@@ -161,7 +207,7 @@ export default function AIPage() {
                   : "Machine Learning, LLMs, Generative AI and Agents"}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4 flex flex-col items-end">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-1 sm:mt-0 shrink-0 sm:ml-4">
               <h3 className="text-sm text-hacker-green">DIO</h3>
               <Link
                 href="https://www.dio.me/certificate/J2DQHOY1"
@@ -176,8 +222,8 @@ export default function AIPage() {
           </div>
 
           {/* 3. DIO - Bootcamp Itaú Java com IA */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-5">
-            <div className="text-start">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-5">
+            <div className="text-start w-full sm:w-auto">
               <h2 className="text-lg font-bold">
                 Bootcamp Itaú - Java com IA
               </h2>
@@ -187,7 +233,7 @@ export default function AIPage() {
                   : "Enterprise Java backend engineering and AI integration"}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4 flex flex-col items-end">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-1 sm:mt-0 shrink-0 sm:ml-4">
               <h3 className="text-sm text-hacker-green">Itaú / DIO</h3>
               <Link
                 href="https://www.dio.me/certificate/AW6BOVSB"
@@ -202,8 +248,8 @@ export default function AIPage() {
           </div>
 
           {/* 4. AWS TreinaBrasil */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-5">
-            <div className="text-start">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-5">
+            <div className="text-start w-full sm:w-auto">
               <h2 className="text-lg font-bold">
                 {isPt
                   ? "Como automatizar chatbots para o seu negócio"
@@ -215,7 +261,7 @@ export default function AIPage() {
                   : "AWS cloud architecture, intelligent chatbots & automation"}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-1 sm:mt-0 shrink-0 sm:ml-4">
               <h3 className="text-sm text-hacker-green">AWS / TreinaBrasil</h3>
               <h4 className="text-xs text-mid-grey">
                 {isPt ? "Especialização" : "Specialization"}
@@ -231,8 +277,8 @@ export default function AIPage() {
           </h3>
 
           {/* 1. Tradução & Alinhamento de Vídeo (MFA + Whisper) */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-4">
-            <div className="text-start">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-4">
+            <div className="text-start w-full sm:w-auto">
               <h2 className="text-base font-bold">
                 {isPt
                   ? "Tradução & Alinhamento de Vídeo"
@@ -244,14 +290,14 @@ export default function AIPage() {
                   : "Automated phonetic forced alignment with Montreal Forced Aligner & Whisper for frame-accurate dubbing and subtitles."}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-1 sm:mt-0 shrink-0 sm:ml-4">
               <h4 className="text-xs text-mid-grey">MFA / Whisper</h4>
             </div>
           </div>
 
           {/* 2. Visão Computacional & OCR (YOLOv5) */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-5">
-            <div className="text-start">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-5">
+            <div className="text-start w-full sm:w-auto">
               <h2 className="text-base font-bold">
                 {isPt
                   ? "Visão Computacional & OCR (YOLOv5)"
@@ -263,7 +309,7 @@ export default function AIPage() {
                   : "Custom models for object detection, spatial tracking, and visual text extraction optimized for local edge inference."}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-1 sm:mt-0 shrink-0 sm:ml-4">
               <h4 className="text-xs text-mid-grey">
                 {isPt ? "Visão em Edge" : "Computer Vision"}
               </h4>
@@ -271,8 +317,8 @@ export default function AIPage() {
           </div>
 
           {/* 3. Consultas em Linguagem Natural (PandasAI) */}
-          <div className="job-local-time flex flex-row justify-between px-2 mt-5">
-            <div className="text-start">
+          <div className="job-local-time flex flex-col sm:flex-row sm:justify-between px-2 mt-5">
+            <div className="text-start w-full sm:w-auto">
               <h2 className="text-base font-bold">
                 {isPt
                   ? "Consultas em Linguagem Natural (PandasAI)"
@@ -284,7 +330,7 @@ export default function AIPage() {
                   : "Natural language query translation into executable Python DataFrame aggregations and dynamic charting."}
               </p>
             </div>
-            <div className="job-time text-end shrink-0 ml-4">
+            <div className="job-time flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start mt-1 sm:mt-0 shrink-0 sm:ml-4">
               <h4 className="text-xs text-mid-grey">Tabular AI</h4>
             </div>
           </div>
@@ -293,7 +339,7 @@ export default function AIPage() {
 
       {/* Botão Inferior: Avançar para Projects */}
       <div
-        className="next-scroll flex items-center flex-col justify-center gap-2 my-10 text-mid-grey cursor-pointer"
+        className="next-scroll flex items-center flex-col justify-center gap-2 my-8 sm:my-10 text-mid-grey cursor-pointer"
         onClick={() => router.push("/projects")}
       >
         <span>{isPt ? "Projetos" : "Projects"}</span>
